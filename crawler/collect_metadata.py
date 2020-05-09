@@ -40,7 +40,7 @@ def collect_video_metadata():
     driver = Chrome(webdriver_path, options=options)
 
     status_to_string = ['ended', 'played', 'paused', 'buffered', 'queued', 'unstarted']
-    with open('./data/selected_videos1.json') as json_file:
+    with open('./data/videos_sampling.json') as json_file:
         data = json.load(json_file)
         for video in data:
             print('============================================')
@@ -112,7 +112,7 @@ def collect_video_metadata():
                 if category:
                     data[video]['category'] = category
 
-        dict_to_json('./data/selected_videos2.json', data)
+        dict_to_json('./data/videos_metadata.json', data)
 
 
 if __name__ == '__main__':

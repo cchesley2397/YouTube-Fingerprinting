@@ -83,4 +83,5 @@ def crawl_by_ui_search():
 
 
 if __name__ == '__main__':
+    generate_keyword_urls()
     crawl_by_ui_search()

@@ -5,7 +5,7 @@ from crawler.utils.io import *
 
 if __name__ == '__main__':
     # Select a random sampling of 100 video IDs from the provided JSON and write to a new file
-    with open('./data/video_dataset1.json') as json_file:
+    with open('./data/videos.json') as json_file:
         data = json.load(json_file)
         indeces = set()
         selected_videos = {}
@@ -18,4 +18,4 @@ if __name__ == '__main__':
             key = key_list[index]
             video_data = data['videos'][key]
             selected_videos[key] = video_data
-    dict_to_json('./data/selected_videos1.json', selected_videos)
+    dict_to_json('./data/videos_sampling.json', selected_videos)
